@@ -3,24 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Login</title>
+  <title>TaskFlow</title>
   <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
-  <div class="center-wrapper">
-    <div class="glass-card merged">
-      <div class="image-section">
-        <img src="img/loginimg.jpeg" alt="Welcome!" />
+  <div class="container">
+    <div class="left-panel">
+      <div class="logo">
+        <img src="img/loginimg.jpeg" alt="Checkmark" />
       </div>
-      
-      <div class="form-section">
-        <h2>Welcome !~</h2>
-        <form id="login-form">
-          <input type="text" id="name" placeholder="Enter your name" required />
-          <input type="date" id="dob" required />
-          <button type="submit">Login</button>
-        </form>
-      </div>
+      <h1>Welcome to TaskFlow!</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lobortis maximus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+    
+    <div class="right-panel">
+      <h2>Welcome !~</h2>
+      <form id="verifyForm">
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Name" required/>
+
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" required/>
+
+        <button type="submit">Verify</button>
+      </form>
     </div>
   </div>
 
