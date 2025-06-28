@@ -191,6 +191,27 @@ function setActiveTab(tabName) {
   localStorage.setItem("selectedTab", tabName);
 }
 
+if (localStorage.getItem("darkMode") === "enabled") {
+  document.body.classList.add("dark-mode");
+}
+
+// Add this block:
+let userName = localStorage.getItem("userName");
+if (!userName) {
+  userName = prompt("Enter your name:");
+  if (userName && userName.trim()) {
+    userName = userName.trim();
+    localStorage.setItem("userName", userName);
+  } else {
+    userName = "A";
+  }
+}
+
+const initialSpan = document.querySelector(".initial");
+if (initialSpan) {
+  initialSpan.textContent = userName.charAt(0).toUpperCase();
+}
+
 // On page load, restore selected tab
 const savedTab = localStorage.getItem("selectedTab") || "todo";
 setActiveTab(savedTab);
