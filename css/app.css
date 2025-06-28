@@ -162,6 +162,10 @@ body {
   color: #ccc;
 }
 
+.task .content {
+  color: white;
+}
+
 .task .actions {
   margin-top: 0.5rem;
   display: flex;
