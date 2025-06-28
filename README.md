@@ -42,19 +42,19 @@ By building TaskFlow, I aimed to:
 
 ## Core Features
 1. Landing Page
-   a. Age verification using DOB (must be over 10)
-   b. Form validations
-   c. Store user data in localStorage
-   d. Auto-redirect on returning visit
+   1. Age verification using DOB (must be over 10)
+   2. Form validations
+   3. Store user data in localStorage
+   4. Auto-redirect on returning visit
    
 2. Task Management
-   a. Dynamic profile with avatar (UI Avatars API)
-   b. Add new tasks
-   c. Move tasks between Todo ↔ Completed ↔ Archived
-   d. Show last modified timestamp
-   e. Task counters by stage
-   f. Fetch dummy todos (DummyJSON API) on first visit
-   g. Persistent state across reloads
+   1. Dynamic profile with avatar (UI Avatars API)
+   2. Add new tasks
+   3. Move tasks between Todo ↔ Completed ↔ Archived
+   4. Show last modified timestamp
+   5. Task counters by stage
+   6. Fetch dummy todos (DummyJSON API) on first visit
+   7. Persistent state across reloads
 
 ## Creative Contributions
 I have designed and developed all UI components, page layouts, logos, color palettes, and responsive interactions. No UI frameworks or pre-built design systems were used.
