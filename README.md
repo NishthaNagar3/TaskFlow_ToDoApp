@@ -21,5 +21,56 @@ By building TaskFlow, I aimed to:
    2. DummyJSON Todos API
 
 
-Note: All UI/UX, logos, and visuals are originally designed and created by me.
+## Application Structure
+1️. Landing Page – index.html
+   1. Age Verification (must be >10 years old)
+   2. User input form (name & DOB)
+   3. Form validation + data persistence via localStorage
+   4. Auto-redirect if user already exists
+
+2. Main Application – app.html
+   1. Displays user's name + avatar
+   2. Task management across:
+   3. Todo
+   4. Completed
+   5. Archived
+   6. Add new tasks
+   7. Move tasks across stages
+   8. Track last modified timestamp
+   9. Sign out functionality (clears localStorage)
+
+
+## Core Features
+1. Landing Page
+   a. Age verification using DOB (must be over 10)
+   b. Form validations
+   c. Store user data in localStorage
+   d. Auto-redirect on returning visit
+   
+2. Task Management
+   a. Dynamic profile with avatar (UI Avatars API)
+   b. Add new tasks
+   c. Move tasks between Todo ↔ Completed ↔ Archived
+   d. Show last modified timestamp
+   e. Task counters by stage
+   f. Fetch dummy todos (DummyJSON API) on first visit
+   g. Persistent state across reloads
+
+## Creative Contributions
+I have designed and developed all UI components, page layouts, logos, color palettes, and responsive interactions. No UI frameworks or pre-built design systems were used.
+UI Highlights: 
+I. Clean, modern, and minimal design
+II. Mobile-first responsive layout
+III. Smooth transitions between task stages
+IV. Color-coded stage distinctions
+V. Creative improvements over reference design
+
+## Project Milestones
+Milestone	Description:
+1. Milestone 1	Landing page UI
+2. Milestone 2	Form validation & localStorage
+3. Milestone 3	Todo app layout + basic features
+4. Milestone 4	Completed + Archived stages
+5. Milestone 5	Final polish + API integration + responsiveness
+
 
