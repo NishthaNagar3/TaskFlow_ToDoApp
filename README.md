@@ -5,16 +5,21 @@ Todo, Completed, and Archived — all while demonstrating clean code, smooth UX,
 
 ## Project Objectives
 By building TaskFlow, I aimed to:
-
 1. Build fully responsive web interfaces with HTML/CSS
 2. Add dynamic, interactive features using Vanilla JavaScript
 3. Use localStorage for data persistence
 4. Integrate with external APIs for user avatars and dummy tasks
-5.Ensure form validation, state management, and clean UI transitions
+5. Ensure form validation, state management, and clean UI transitions
 
+## Tech Stack:
+1. HTML5
+2. CSS3 (Custom CSS, no frameworks)
+3. Vanilla JavaScript
+4. localStorage
+5. External APIs:
+   1. UI Avatars API
+   2. DummyJSON Todos API
 
-
-![image](https://github.com/user-attachments/assets/31f1a8e8-5815-437e-9261-b3f6c57a9ddf)
 
 Note: All UI/UX, logos, and visuals are originally designed and created by me.
 
