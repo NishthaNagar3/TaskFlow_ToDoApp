@@ -14,7 +14,7 @@ body {
 /* Left panel */
 .left-panel {
   flex: 1;
-  background: #100f14;
+  background:rgb(0, 0, 0);
   padding: 60px 40px;
   display: flex;
   flex-direction: column;
@@ -42,7 +42,7 @@ body {
 /* Right panel */
 .right-panel {
   flex: 1;
-  background-color: #000;
+  background-color: #0d0118;
   display: flex;
   flex-direction: column;
   justify-content: center;
