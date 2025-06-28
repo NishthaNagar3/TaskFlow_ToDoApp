@@ -156,14 +156,14 @@ body {
   border-radius: 10px;
 }
 
+.task .content {
+  color: white;
+}
+
 .task .meta {
   text-align: right;
   font-size: 0.75rem;
   color: #ccc;
-}
-
-.task .content {
-  color: white;
 }
 
 .task .actions {
