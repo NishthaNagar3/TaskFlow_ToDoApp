@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: radial-gradient(circle, #0f0f1c, #2E1F4F);
+  background: linear-gradient(to right, #0f0f1c,#2E1F4F,#4D3586);
   color: white;
 }
 
@@ -52,7 +52,7 @@ body {
   border-radius: 25px;
   border: none;
   font-size: 1rem;
-  background-color: #333;
+  background-color: #78638c9d;
   color: white;
 }
 
