@@ -11,6 +11,13 @@ By building TaskFlow, I aimed to:
 4. Integrate with external APIs for user avatars and dummy tasks
 5. Ensure form validation, state management, and clean UI transitions
 
+## Login Page: 
+![image](https://github.com/user-attachments/assets/8d281835-0500-4e22-831b-247a6d7f694b)
+
+## Home Page: 
+![image](https://github.com/user-attachments/assets/1efe564d-2927-4577-a959-200952e31490)
+
+
 ## Tech Stack:
 1. HTML5
 2. CSS3 (Custom CSS, no frameworks)
