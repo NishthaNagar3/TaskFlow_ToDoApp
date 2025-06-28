@@ -1,0 +1,130 @@
+/* Color Palette */
+:root {
+  --black: #000000;
+  --dark-purple: #15043B;
+  --mid2-purple: #2E1F4F;
+  --mid1-purple: #665986;
+  --light-purple: #9F89D2;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body, html {
+  height: 100%;
+  background: var(--black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 5000px;
+  height: 600px;
+}
+
+.glass-card.merged {
+  display: flex;
+  flex-direction: row;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  overflow: hidden;
+  width: 100%;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* Left image side */
+.image-section {
+  flex: 1;
+  min-width: 40%;
+}
+
+.image-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Right form side */
+.form-section {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--white);
+  background: linear-gradient(to bottom right, var(--mid2-purple), var(--mid1-purple));
+}
+
+.form-section h2 {
+  color: var(--light-purple);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+input[type="text"],
+input[type="date"] {
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: var(--white);
+}
+
+input::placeholder {
+  color: var(--white);
+  opacity: 0.7;
+}
+
+button {
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--light-purple);
+  color: var(--white);
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--mid1-purple);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .glass-card.merged {
+    flex-direction: column;
+  }
+
+  .image-section {
+    height: 200px;
+  }
+
+  .image-section img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .form-section {
+    padding: 30px 20px;
+  }
+}
