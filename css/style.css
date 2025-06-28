@@ -11,6 +11,7 @@ body {
   width: 100%;
 }
 
+/* Left panel */
 .left-panel {
   flex: 1;
   background: #100f14;
@@ -20,12 +21,12 @@ body {
   justify-content: center;
   align-items: start;
   gap: 20px;
+  text-align: left;
 }
 
 .left-panel .logo img {
   width: 120px;
   height: auto;
-  background-color: transparent;
 }
 
 .left-panel h1 {
@@ -38,6 +39,7 @@ body {
   line-height: 1.5;
 }
 
+/* Right panel */
 .right-panel {
   flex: 1;
   background-color: #000;
@@ -85,4 +87,61 @@ button:hover {
 }
 button:active {
   background-color: #7c3aed;
+}
+
+/* ---------- Responsive Design ---------- */
+
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .left-panel, .right-panel {
+    width: 100%;
+    padding: 40px 30px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .left-panel {
+    order: 1;
+  }
+
+  .right-panel {
+    order: 2;
+  }
+
+  .left-panel h1,
+  .right-panel h2 {
+    font-size: 24px;
+  }
+
+  .left-panel p {
+    font-size: 14px;
+  }
+
+  input[type="text"],
+  input[type="date"],
+  button {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .left-panel h1,
+  .right-panel h2 {
+    font-size: 20px;
+  }
+
+  .left-panel p {
+    font-size: 13px;
+  }
+
+  .left-panel,
+  .right-panel {
+    padding: 30px 20px;
+  }
 }
