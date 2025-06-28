@@ -1,8 +1,9 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to right, #0f0f1c,#2E1F4F,#4D3586);
-  color: white;
+  /* background-color: #000; */
+  background: linear-gradient(to right, #000, #0c0619,#0c0619,#1a0235, #2E1F4F); 
+  /* color: white; */
 }
 
 .header {
@@ -52,8 +53,11 @@ body {
   border-radius: 25px;
   border: none;
   font-size: 1rem;
-  background-color: #78638c9d;
-  color: white;
+  background-color: rgba(167, 139, 250, 0.6);
+  /* color: rgb(0, 0, 0); */
+}
+.search-bar input::placeholder {
+  color: black;
 }
 
 .search-bar button {
