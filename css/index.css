@@ -48,6 +48,9 @@ body {
   justify-content: center;
   padding: 60px;
 }
+.right-panel p {
+  text-align: center;
+}
 
 .right-panel h2 {
   font-size: 28px;
