@@ -38,8 +38,9 @@ function renderTasks(filter = currentTab, query = '') {
           <button class="archive" data-id="${task.id}">Archive</button>
         ` : ''}
         ${task.status === 'archived' ? `
+          <button class="complete" data-id="${task.id}">Completed</button>
           <button class="unarchive" data-id="${task.id}">Unarchive</button>
-        ` : ''}
+          ` : ''}
       </div>
     `;
     taskList.appendChild(div);
@@ -47,6 +48,7 @@ function renderTasks(filter = currentTab, query = '') {
 
   attachActionHandlers();
   updateCounts();
+  updateProgressBar();
 }
 
 function updateCounts() {
@@ -119,9 +121,14 @@ tabs.forEach(tab => {
   });
 });
 
-searchBtn.addEventListener("click", () => {
+// searchBtn.addEventListener("click", () => {
+//   renderTasks(currentTab, searchInput.value);
+// });
+
+searchInput.addEventListener("input", () => {
   renderTasks(currentTab, searchInput.value);
 });
+
 
 function setActiveTab(tabName) {
   tabs.forEach(tab => {
@@ -181,7 +188,6 @@ if (localStorage.getItem("darkMode") === "enabled") {
   document.body.classList.add("dark-mode");
 }
 
-// renderTasks('todo');
 // Save selected tab to localStorage
 function setActiveTab(tabName) {
   tabs.forEach(tab => {
@@ -211,6 +217,21 @@ const initialSpan = document.querySelector(".initial");
 if (initialSpan) {
   initialSpan.textContent = userName.charAt(0).toUpperCase();
 }
+
+
+function updateProgressBar() {
+  const total = tasks.filter(t => t.status !== 'archived').length;
+  const completed = tasks.filter(t => t.status === 'completed').length;
+  const percent = total === 0 ? 0 : Math.round((completed / total) * 100);
+
+  const progressFill = document.getElementById("progressFill");
+  const progressPercent = document.getElementById("progressPercent");
+
+  progressFill.style.width = `${percent}%`;
+  progressPercent.textContent = `${percent}%`;
+}
+
+
 
 // On page load, restore selected tab
 const savedTab = localStorage.getItem("selectedTab") || "todo";
