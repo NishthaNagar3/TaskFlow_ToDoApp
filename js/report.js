@@ -13,11 +13,9 @@ const completedPercent = (completedTasks / totalTasks) * 100;
 const archivedPercent = (archivedTasks / totalTasks) * 100;
 const notCompletedPercent = (notCompletedTasks / totalTasks) * 100;
 
-// 🟣 Dynamically update HTML spans with task stats
+//  Dynamically update HTML spans with task stats
 document.getElementById('totalTasks').textContent = totalTasks;
 document.getElementById('achievedTasks').textContent = completedTasks;
-
-
 
 
 // Bar chart setup with 3 vertical bars (each 100% stacked)
@@ -123,49 +121,20 @@ const barChart = new Chart(ctxBar, {
 });
 
 
+// Handle Sign Out button
+document.querySelector('.signout').addEventListener('click', () => {
+  // Clear localStorage or specific session items
+  localStorage.removeItem('tasks'); // or clear all with localStorage.clear();
 
+  // Redirect to login page or home
+  window.location.href = 'index.html'; // Change this to your actual login/home page
+});
 
-// --------------- og options for bar chart formatiiong -------------
-//   options: {
-//     responsive: true,
-//     plugins: {
-//       title: {
-//         display: true,
-//         text: 'Task Status Distribution (100% Stacked Bars)'
-//       },
-//       tooltip: {
-//         mode: 'index',
-//         intersect: false,
-//         callbacks: {
-//           label: function(context) {
-//             return `${context.dataset.label}: ${context.parsed.y.toFixed(1)}%`;
-//           }
-//         }
-//       },
-//       legend: {
-//         position: 'bottom'
-//       }
-//     },
-//     interaction: {
-//       mode: 'index',
-//       axis: 'x',
-//       intersect: false
-//     },
-//     scales: {
-//       x: {
-//         stacked: true,
-//         title: {
-//           display: true,
-//           text: 'Task Categories'
-//         }
-//       },
-//       y: {
-//         stacked: true,
-//         beginAtZero: true,
-//         max: 100,
-//         title: {
-//           display: true,
-//           text: 'Percentage (%)'
-//         }
-//       }
-//     }
+// Profile Initial
+// Get user data from localStorage and set the initial in the profile section
+const user = JSON.parse(localStorage.getItem("user"));
+const initialSpan = document.querySelector(".initial");
+
+if (user && user.name && initialSpan) {
+  initialSpan.textContent = user.name.charAt(0).toUpperCase();
+}

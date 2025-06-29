@@ -201,21 +201,13 @@ if (localStorage.getItem("darkMode") === "enabled") {
   document.body.classList.add("dark-mode");
 }
 
-// Add this block:
-let userName = localStorage.getItem("userName");
-if (!userName) {
-  userName = prompt("Enter your name:");
-  if (userName && userName.trim()) {
-    userName = userName.trim();
-    localStorage.setItem("userName", userName);
-  } else {
-    userName = "A";
-  }
-}
-
+// Profile Initial
+// Get user data from localStorage and set the initial in the profile section
+const user = JSON.parse(localStorage.getItem("user"));
 const initialSpan = document.querySelector(".initial");
-if (initialSpan) {
-  initialSpan.textContent = userName.charAt(0).toUpperCase();
+
+if (user && user.name && initialSpan) {
+  initialSpan.textContent = user.name.charAt(0).toUpperCase();
 }
 
 
