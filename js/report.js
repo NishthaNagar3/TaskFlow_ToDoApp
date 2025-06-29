@@ -137,3 +137,13 @@ if (user && user.name && initialSpan) {
   initialSpan.textContent = user.name.charAt(0).toUpperCase();
 }
 
+// 🌙 Dark Mode Toggle
+function applyDarkMode(isDark) {
+  document.body.classList.toggle("dark-mode", isDark);
+  localStorage.setItem("darkMode", isDark ? "enabled" : "disabled");
+}
+
+darkModeToggle.addEventListener("click", () => {
+  const isDark = document.body.classList.toggle("dark-mode");
+  localStorage.setItem("darkMode", isDark ? "enabled" : "disabled");
+});
