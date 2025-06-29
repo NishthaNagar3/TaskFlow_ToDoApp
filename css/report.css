@@ -70,6 +70,20 @@ header {
   color: #ddd;
 }
 
+.initial {
+  background-color: #a78bfa;
+  color: #fff;
+  border-radius: 50%;
+  padding: 10px 14px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  display: inline-block;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+
+
 /* ===============================
    Charts Section
 ================================= */

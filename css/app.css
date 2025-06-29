@@ -79,7 +79,9 @@ body {
   transform: scale(1.05);
 }
 
-.signout:hover {
+.signout:hover,
+.initial:hover,
+#addBtn:hover {
   background-color: #7c3aed;
   color: black;
 }
