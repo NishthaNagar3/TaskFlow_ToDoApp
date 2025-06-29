@@ -202,15 +202,20 @@ if (localStorage.getItem("darkMode") === "enabled") {
   document.body.classList.add("dark-mode");
 }
 
-// Profile Initial
+// Load user and show initial
 const user = JSON.parse(localStorage.getItem("user"));
-const userName = user ? user.name : "User";
-const initialSpan = document.querySelector(".initial");
-if (initialSpan) {
-  initialSpan.textContent = userName.charAt(0).toUpperCase();
+if (user && user.name) {
+  const initialSpan = document.querySelector(".initial");
+  if (initialSpan) {
+    initialSpan.textContent = user.name.charAt(0).toUpperCase();
+  }
+} else {
+  // Redirect to index.html if user data is missing
+  window.location.href = 'index.html';
 }
 
 
+// Progress Bar
 function updateProgressBar() {
   const total = tasks.filter(t => t.status !== 'archived').length;
   const completed = tasks.filter(t => t.status === 'completed').length;
@@ -222,6 +227,7 @@ function updateProgressBar() {
   progressFill.style.width = `${percent}%`;
   progressPercent.textContent = `${percent}%`;
 }
+
 
 
 
