@@ -56,11 +56,13 @@ body {
   font-weight: bold;
   cursor: pointer;
   transition: background 0.3s ease, transform 0.2s;
+  text-decoration: none;
 }
 .dashboard-btn:hover {
   background: linear-gradient(135deg, #333, #555);
   transform: scale(1.05);
 }
+
 
 .signout:hover,
 .initial:hover,
