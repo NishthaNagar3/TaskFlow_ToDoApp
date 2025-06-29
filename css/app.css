@@ -23,6 +23,31 @@ body {
   width: 50px;
 }
 
+
+/* Dashboard */
+.dashboard-btn {
+  padding: 0.5rem 1rem;
+  background: linear-gradient(135deg, #222, #444);
+  color: #fff;
+  border: 1px solid #666;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.dashboard-btn:hover {
+  background: linear-gradient(135deg, #333, #555);
+  transform: scale(1.05);
+}
+
+.dashboard-btn:active {
+  transform: scale(0.95);
+}
+
 /* Dark mode toggle */
 .dark-toggle {
   padding: 0.5rem 1rem;
