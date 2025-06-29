@@ -12,10 +12,13 @@ By building TaskFlow, I aimed to:
 5. Ensure form validation, state management, and clean UI transitions
 
 ## Login Page: 
-![image](https://github.com/user-attachments/assets/8d281835-0500-4e22-831b-247a6d7f694b)
+![image](https://github.com/user-attachments/assets/f73a2a6a-f986-4a22-9fa1-520a30997e9d)
 
 ## Home Page: 
-![image](https://github.com/user-attachments/assets/1efe564d-2927-4577-a959-200952e31490)
+![image](https://github.com/user-attachments/assets/8c4d278d-c1a4-4ef6-8fed-858eee4a0a0a)
+
+## Report Dashboard Page:
+![image](https://github.com/user-attachments/assets/e7566022-3e59-439a-a3c0-3fb2230bb93b)
 
 
 ## Tech Stack:
