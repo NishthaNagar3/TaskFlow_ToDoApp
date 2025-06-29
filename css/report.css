@@ -271,22 +271,40 @@ canvas {
   .charts .chart-container:last-child {
     margin-bottom: 0;
   }
-  .dashboard-btn {
-    width: 100%;
-    text-align: center;
-    padding: 0.5rem;
-    font-size: 1rem;
-  }
+  
+  .dashboard-btn,
   .dark-toggle {
-    width: 100%;
-    text-align: center;
-    padding: 0.5rem;
-    font-size: 1rem;
+  font-size: 0.85rem;
+  padding: 0.3rem 0.6rem;
+  max-width: 120px;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.signout {
+  font-size: 0.85rem;
+  padding: 0.3rem 0.6rem;
+  max-width: 100px;
+  border-radius: 6px;
+  text-align: center;
+}
+
+}
+
+/* Hide text inside buttons on small screens */
+@media (max-width: 768px) {
+  .dashboard-btn span,
+  .dark-toggle span {
+    display: none;
   }
-  .signout {
-    width: 100%;
-    text-align: center;
-    padding: 0.5rem;
-    font-size: 1rem;
+
+  .dashboard-btn::before {
+    content: "🏠"; /* Home icon */
+    margin-right: 4px;
+  }
+
+  .dark-toggle::before {
+    content: "🌙"; /* Dark mode icon */
+    margin-right: 4px;
   }
 }
