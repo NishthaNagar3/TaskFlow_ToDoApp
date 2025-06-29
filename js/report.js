@@ -22,6 +22,11 @@ const total = parseInt(document.getElementById("totalTasks").textContent) || 0;
 const achieved = parseInt(document.getElementById("achievedTasks").textContent) || 0;
 const notCompleted = Math.max(0, total - achieved);
 
+// Apply dark mode on page load if previously enabled
+if (localStorage.getItem("darkMode") === "enabled") {
+  document.body.classList.add("dark-mode");
+}
+
 
 // Bar chart setup
 const ctxBar = document.getElementById('barChart').getContext('2d');
