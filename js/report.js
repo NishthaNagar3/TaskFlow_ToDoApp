@@ -1,4 +1,5 @@
- 
+
+// ------------------------- new with hover specific ---------- 
 // ------------------------------
 // Fetch data from local storage first
 const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
@@ -13,12 +14,11 @@ const completedPercent = (completedTasks / totalTasks) * 100;
 const archivedPercent = (archivedTasks / totalTasks) * 100;
 const notCompletedPercent = (notCompletedTasks / totalTasks) * 100;
 
-//  Dynamically update HTML spans with task stats
+// Update HTML with task stats
 document.getElementById('totalTasks').textContent = totalTasks;
 document.getElementById('achievedTasks').textContent = completedTasks;
 
-
-// Bar chart setup with 3 vertical bars (each 100% stacked)
+// Bar chart setup
 const ctxBar = document.getElementById('barChart').getContext('2d');
 
 const barChart = new Chart(ctxBar, {
@@ -43,8 +43,6 @@ const barChart = new Chart(ctxBar, {
       }
     ]
   },
-  
-
   options: {
     responsive: true,
     plugins: {
@@ -53,16 +51,28 @@ const barChart = new Chart(ctxBar, {
         text: 'Task Status Distribution (100% Stacked Bars)',
         color: '#a78bfa',
         font: {
-            size: 18,
-            weight: 'bold'
+          size: 18,
+          weight: 'bold'
         }
       },
       tooltip: {
-        mode: 'index',
-        intersect: false,
+        mode: 'nearest',  // Show tooltip for hovered bar only
+        intersect: true,
         callbacks: {
-          label: function(context) {
-            return `${context.dataset.label}: ${context.parsed.y.toFixed(1)}%`;
+          label: function (context) {
+            const label = context.dataset.label;
+            let value = 0;
+            let percent = context.parsed.y.toFixed(1);
+
+            if (label === 'Completed') {
+              value = completedTasks;
+            } else if (label === 'Archived') {
+              value = archivedTasks;
+            } else if (label === 'Not Completed') {
+              value = notCompletedTasks;
+            }
+
+            return `${label}: ${value} task${value !== 1 ? 's' : ''} (${percent}%)`;
           }
         }
       },
@@ -78,9 +88,8 @@ const barChart = new Chart(ctxBar, {
       }
     },
     interaction: {
-      mode: 'index',
-      axis: 'x',
-      intersect: false
+      mode: 'nearest',
+      intersect: true
     },
     scales: {
       x: {
@@ -90,15 +99,10 @@ const barChart = new Chart(ctxBar, {
           text: 'Task Categories',
           color: '#c7b8f2'
         },
-        // grid: {
-        //   color: '#c7b8f2',
-        //   borderColor: '#c7b8f2'
-        // },
         ticks: {
           color: '#c7b8f2'
         }
       },
-
       y: {
         stacked: true,
         beginAtZero: true,
@@ -120,21 +124,16 @@ const barChart = new Chart(ctxBar, {
   }
 });
 
-
 // Handle Sign Out button
 document.querySelector('.signout').addEventListener('click', () => {
-  // Clear localStorage or specific session items
-  localStorage.removeItem('tasks'); // or clear all with localStorage.clear();
-
-  // Redirect to login page or home
-  window.location.href = 'index.html'; // Change this to your actual login/home page
+  localStorage.removeItem('tasks');
+  window.location.href = 'index.html';
 });
 
 // Profile Initial
-// Get user data from localStorage and set the initial in the profile section
 const user = JSON.parse(localStorage.getItem("user"));
 const initialSpan = document.querySelector(".initial");
-
 if (user && user.name && initialSpan) {
   initialSpan.textContent = user.name.charAt(0).toUpperCase();
 }
+
