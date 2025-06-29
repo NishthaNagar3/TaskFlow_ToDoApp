@@ -344,3 +344,52 @@ body {
   color: rgb(0, 0, 0);
   font-weight: bold;
 }
+
+
+
+/* ===============================
+   Always Keep Header Buttons Inline
+================================= */
+@media (max-width: 768px) {
+  .right-section {
+    flex-direction: row !important;       /* Force horizontal layout */
+    flex-wrap: wrap;                      /* Allow wrapping if needed */
+    justify-content: flex-start;
+    gap: 0.5rem;                          /* Slightly tighter spacing */
+    width: 100%;
+  }
+  .profile {
+    flex-direction: row !important;       /* Keep initial + sign out inline */
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  /* Make buttons shrink gracefully */
+  .dark-toggle,
+  .dashboard-btn,
+  .signout {
+    flex-shrink: 1;
+    white-space: nowrap;
+    padding: 0.2rem 0.4rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Hide text inside buttons on small screens */
+@media (max-width: 768px) {
+  .dashboard-btn span,
+  .dark-toggle span {
+    display: none;
+  }
+
+  .dashboard-btn::before {
+    content: "📊"; /* Dashboard icon */
+    margin-right: 4px;
+  }
+
+  .dark-toggle::before {
+    content: "🌙"; /* Dark mode icon */
+    margin-right: 4px;
+  }
+}
+
