@@ -17,6 +17,11 @@ const notCompletedPercent = (notCompletedTasks / totalTasks) * 100;
 // Update HTML with task stats
 document.getElementById('totalTasks').textContent = totalTasks;
 document.getElementById('achievedTasks').textContent = completedTasks;
+document.getElementById("notCompletedTasks").textContent = notCompletedTasks;
+const total = parseInt(document.getElementById("totalTasks").textContent) || 0;
+const achieved = parseInt(document.getElementById("achievedTasks").textContent) || 0;
+const notCompleted = Math.max(0, total - achieved);
+
 
 // Bar chart setup
 const ctxBar = document.getElementById('barChart').getContext('2d');

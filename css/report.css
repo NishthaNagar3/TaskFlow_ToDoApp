@@ -81,12 +81,13 @@ header {
   gap: 2rem;
 }
 
+
 .chart-container {
   background: rgba(255, 255, 255, 0.05);
   padding: 1rem;
   border-radius: 12px;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
-  width: 45%;
+  width: calc(50% - 1rem);
   min-width: 320px;
 }
 
@@ -135,3 +136,28 @@ canvas {
 .dark-mode canvas {
   background: #111;
 }
+
+/* .initial {
+  background-color: #e0e0e0;
+  color: #333;
+  border-radius: 50%;
+  padding: 10px 14px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  display: inline-block;
+  transition: background-color 0.3s ease, color 0.3s ease;
+} */
+
+.dark-mode .initial {
+  background-color: #333; /* matches .signout in dark-mode */
+  color: #fff;
+  border: 1px solid rebeccapurple;
+}
+
+.dark-mode .initial:hover,
+.dark-mode .signout:hover{
+  background-color: #444;
+  transform: scale(1.05);
+  transition: background 0.3s ease, transform 0.2s;
+}
+

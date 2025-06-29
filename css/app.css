@@ -127,6 +127,25 @@ body {
   color: #fff;
 }
 
+.dark-mode .initial {
+  background-color: #333; /* matches .signout in dark-mode */
+  color: #fff;
+  border: 1px solid rebeccapurple;
+}
+.dark-mode #addBtn {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid rebeccapurple;
+}
+
+.dark-mode .initial:hover,
+.dark-mode #addBtn:hover ,
+.dark-mode .signout:hover{
+  background-color: #444;
+  transform: scale(1.05);
+  transition: background 0.3s ease, transform 0.2s;
+}
+
 /* ========== Profile ========== */
 .profile {
   display: flex;
