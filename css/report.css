@@ -72,16 +72,11 @@ header {
 
 .initial {
   background-color: #a78bfa;
-  color: #fff;
+  color: #000;
   border-radius: 50%;
-  padding: 10px 14px;
+  padding: 0.5rem 0.75rem;
   font-weight: bold;
-  font-size: 1.2rem;
-  display: inline-block;
-  transition: background-color 0.3s ease, color 0.3s ease;
 }
-
-
 
 
 /* ===============================

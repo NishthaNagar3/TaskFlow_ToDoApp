@@ -62,6 +62,13 @@ body {
   transform: scale(1.05);
 }
 
+.signout:hover,
+.initial:hover,
+#addBtn:hover {
+  background-color: #7c3aed;
+  color: black;
+}
+
 /* ========== Dark Mode Toggle Button ========== */
 .dark-toggle {
   padding: 0.5rem 1rem;
@@ -79,12 +86,6 @@ body {
   transform: scale(1.05);
 }
 
-.signout:hover,
-.initial:hover,
-#addBtn:hover {
-  background-color: #7c3aed;
-  color: black;
-}
 
 /* ========== Dark Mode ========== */
 .dark-mode {
