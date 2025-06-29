@@ -107,15 +107,25 @@ body {
   background-color: #444;
 }
 
-/* .dark-mode .signout {
-  color: white;
-} */
 .dark-mode .signout {
   background-color: #333; /* Darker purple */
   color: #fff;
   border: 1px solid rebeccapurple;
 }
 
+.dark-mode .search-bar input {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.dark-mode .search-bar input::placeholder {
+  color: #ccc;
+}
+
+.dark-mode .search-bar button {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
 
 /* ========== Profile ========== */
 .profile {
