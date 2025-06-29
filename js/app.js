@@ -1,4 +1,3 @@
-
 // File: js/app.js
 const taskList = document.getElementById("task-list");
 const tabs = document.querySelectorAll(".tab");
@@ -202,20 +201,16 @@ if (localStorage.getItem("darkMode") === "enabled") {
   document.body.classList.add("dark-mode");
 }
 
-// Load user and show initial
+// Profile Initial
+// Get user data from localStorage and set the initial in the profile section
 const user = JSON.parse(localStorage.getItem("user"));
-if (user && user.name) {
-  const initialSpan = document.querySelector(".initial");
-  if (initialSpan) {
-    initialSpan.textContent = user.name.charAt(0).toUpperCase();
-  }
-} else {
-  // Redirect to index.html if user data is missing
-  window.location.href = 'index.html';
+const initialSpan = document.querySelector(".initial");
+
+if (user && user.name && initialSpan) {
+  initialSpan.textContent = user.name.charAt(0).toUpperCase();
 }
 
 
-// Progress Bar
 function updateProgressBar() {
   const total = tasks.filter(t => t.status !== 'archived').length;
   const completed = tasks.filter(t => t.status === 'completed').length;
@@ -230,9 +225,9 @@ function updateProgressBar() {
 
 
 
-
 // On page load, restore selected tab
 const savedTab = localStorage.getItem("selectedTab") || "todo";
 setActiveTab(savedTab);
 renderTasks(savedTab);
+
 
